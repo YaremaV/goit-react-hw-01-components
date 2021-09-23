@@ -1,33 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function Statics({id, label, percentage}) {
-    return <section class="statistics">
-  <h2 class="title">Upload stats</h2>
 
-        <ul class="stat-list" key={id}>         
-    <li class="item">
-      <span class="label">{label}</span>
-      <span class="percentage">{percentage}</span>
+export default function Statistics({stats}){
+    return <section className="statistics">
+        <h2 className="title">Upload stats</h2>
+   <ul className="stat-list">
+ {stats.map(stat => (
+        <li key={stat.id} className="item">
+        <span className="label">{stat.label}</span>
+      <span className="percentage">{stat.percentage}</span>
     </li>
-    <li class="item">
-      <span class="label">{label}</span>
-      <span class="percentage">{percentage}</span>
-    </li>
-    <li class="item">
-      <span class="label">{label}</span>
-      <span class="percentage">{percentage}</span>
-    </li>
-    <li class="item">
-      <span class="label">{label}</span>
-      <span class="percentage">{percentage}</span>
-    </li>
+    ))}
   </ul>
 </section>
 }
 
-Statics.propTypes = {
-    id: PropTypes.string,
+Statistics.propTypes = {
     label: PropTypes.string,
-    percentage: PropTypes.number,
-};
+    percentage: PropTypes.number
+}
