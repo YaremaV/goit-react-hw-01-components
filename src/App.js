@@ -1,16 +1,17 @@
 import React from "react";
-import Profile from "./components/profile"
-import Statistics from "./components/statistics";
-import FriendList from "./components/friendlist";
-import TransactionHistory from "./components/transactionhistory"
+import Profile from "./components/profile/profile"
+import Statistics from "./components/statistics/statistics";
+import FriendList from "./components/friendlist/friendlist";
+import TransactionHistory from "./components/transactionhistory/transactionhistory"
 import user from "./user.json"
 import statisticalData from "./statistical-data.json"
 import friends from "./friends.json"
-import transactions  from "./transaction.json"
+import transactions from "./transaction.json"
+import Layout from './components/Layout/Layout';
 
 export default function App() {
   return (
-    <div >
+     <Layout>
       <Profile
   name={user.name}
   tag={user.tag}
@@ -28,7 +29,7 @@ export default function App() {
       
     <TransactionHistory items={transactions} />
       
-    </div>
+     </Layout>
   );
 }
 

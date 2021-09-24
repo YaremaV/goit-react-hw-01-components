@@ -1,6 +1,7 @@
 import React from "react";
 // import PropTypes from "prop-types";
-import FriendListItem from "./friendlistitem";
+import FriendListItem from "../friendlistitem/friendlistitem";
+import './friendlist.css'
 
 export default function FriendList({friends}) {
     return <ul className="friend-list">

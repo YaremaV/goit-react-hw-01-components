@@ -1,0 +1,25 @@
+.FriendItem{
+    box-sizing:content-box;
+
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 5px;
+}
+
+.FriendAvatar{
+    padding: 10px;
+    border-radius: 20%;
+    margin-left: 40px;
+}
+
+.status::before{
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    
+
+    border-radius: 50%;
+    background-color: green;
+}

@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import './friendlistitem.css'
 
 
 export default function FriendListItem({avatar, name, isOnline,id}) {
-    return <li className="item" >
+    return <li className="FriendItem" >
   <span className="status">{isOnline}</span>
-  <img className="avatar" src={avatar} alt={avatar} width="48" />
+  <img className="FriendAvatar" src={avatar} alt={avatar} width="75" />
   <p className="name">{name}</p>
 </li>
 }

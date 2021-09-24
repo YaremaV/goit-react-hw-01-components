@@ -1,5 +1,6 @@
 import React from "react";
-import TransactionList from "./transactionlist"
+import TransactionList from "../transactionlist"
+import "./transactionhistory.css"
 
 export default function TransactionHistory ({ items }) {
     return <table className="transaction-history">
